@@ -1023,6 +1023,21 @@
   end: 2025-10-15
   sub: HCI
 
+- title: ACM IDC
+  year: 2026
+  id: idc26
+  full_name: ACM Interaction Design and Children
+  link: https://idc2026.sites.uu.nl/calls/full-and-short-papers/
+  deadline: '2026-01-27 23:59:59'
+  abstract_deadline: '2026-01-20 23:59:59'
+  timezone: UTC-12
+  place: Brighton, UK
+  date: June, 22-25, 2026
+  start: 2026-06-22
+  end: 2026-06-25
+  sub: ['HCI', 'DES']
+  note: Full/Short Papers deadlines are Jan 20, 2026 (abstract) and Jan 27, 2026 (submission), AoE.
+
 - title: ACM IMX
   year: 2026
   id: imx26
