@@ -1,28 +1,38 @@
----
 - name: Human-Computer Interaction
   sub: HCI
-  color: '#ffd300'
+
 - name: Design
   sub: DES
-  color: '#2EA87D'
+
+- name: Games
+  sub: GAMES
+
+- name: Multimodel
+  sub: MM
+
+- name: Computer Graphics
+  sub: CG
+
+- name: Music
+  sub: MUSIC
+
 - name: CSCW
   sub: CSCW
-  color: '#0aefff'
+
 - name: AI+HCI
   sub: AI
-  color: '#147df5'
+
 - name: Human-Robot Interaction
   sub: HRI
-  color: '#0aff99'
+
 - name: Augmented, Virtual and Mixed Reality
   sub: XR
-  color: '#580aff'
+
 - name: Haptics
   sub: HAP
-  color: '#be0aff'
+
 - name: Visualization
   sub: VIS
-  color: '#a432a8'
+
 - name: Security and Privacy
   sub: SP
-  color: '#a43208'

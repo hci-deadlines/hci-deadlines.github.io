@@ -79,8 +79,17 @@
         {% assign year= "now" | date: "%Y" | plus: 0 %}
         <div id="coming_confs">
           {% for conf in site.data.conferences %}
-          <!-- Show this year or future events (year is computed above) -->
-          {% if conf.year >= year %}
+          <!-- Show this year or future events with complete metadata -->
+          {% assign deadline_value = conf.deadline | append: "" | upcase %}
+          {% assign date_value = conf.date | append: "" | upcase %}
+          {% assign place_value = conf.place | append: "" | upcase %}
+          {% assign start_value = conf.start | append: "" %}
+          {% assign end_value = conf.end | append: "" %}
+          {% assign has_tba = false %}
+          {% if deadline_value contains "TBA" or deadline_value contains "TBD" or date_value contains "TBA" or date_value contains "TBD" or place_value contains "TBA" or place_value contains "TBD" or start_value == "" or end_value == "" %}
+          {% assign has_tba = true %}
+          {% endif %}
+          {% if conf.year >= year and has_tba == false %}
           <div
             id="{{conf.id}}"
             class="ConfItem {% for sub in conf.sub %} {{sub}}-conf {% endfor %}"

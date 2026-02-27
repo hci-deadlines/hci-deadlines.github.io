@@ -1,4 +1,3 @@
-
 - title: ACII
   year: 2023
   id: acii2023
@@ -34,6 +33,51 @@
   start: 2025-10-08
   end: 2025-10-11
   sub: HCI
+
+- title: ACM Multimedia
+  year: 2026
+  id: acmmm26
+  full_name: ACM International Conference on Multimedia
+  link: https://2026.acmmm.org/
+  deadline: '2026-04-01 23:59:59'
+  abstract_deadline: '2026-03-25 23:59:59'
+  timezone: UTC-12
+  place: Rio de Janeiro, Brazil
+  date: November, 10-14, 2026
+  start: 2026-11-10
+  end: 2026-11-14
+  sub: ['HCI', 'MM']
+  note: Main-track abstract registration deadline March 25, 2026 and full paper deadline April 1, 2026 (official 2026 site).
+
+- title: IEEE AIA Workshop
+  year: 2025
+  id: aia25
+  full_name: IEEE Workshop on Artificial Intelligence for Art Creation (AIART)
+  link: https://aiart-2025.github.io/
+  deadline: '2025-04-01 23:59:59'
+  abstract_deadline: ""
+  timezone: UTC-12
+  place: Nantes, France
+  date: July, 4, 2025
+  start: 2025-07-04
+  end: 2025-07-04
+  sub: ['AI', 'DES', 'VIS']
+  note: AIART 2025 (jointly with ICME 2025); workshop paper submissions due April 1, 2025.
+
+- title: ArtsIT
+  year: 2026
+  id: artsit26
+  full_name: International Conference on ArtsIT, Interactivity and Game Creation
+  link: https://artsit.eai-conferences.org/2026/
+  deadline: '2026-06-01 23:59:59'
+  abstract_deadline: ""
+  timezone: UTC-12
+  place: Bratislava, Slovakia
+  date: December, 2-4, 2026
+  start: 2026-12-02
+  end: 2026-12-04
+  sub: ['HCI', 'DES', 'GAMES']
+  note: Official ArtsIT 2026 call lists full-paper submission deadline as June 1, 2026.
 
 - title: ASSETS
   year: 2023
@@ -159,10 +203,10 @@
   end: 2026-09-23
   sub: HCI
 
-- title: CC
+- title: "ACM Creativity & Cognition (C&C)"
   year: 2025
   id: cc25
-  full_name: Creativity & Cognition
+  full_name: "ACM Creativity & Cognition Conference"
   link: https://cc.acm.org/2025/
   deadline: '2025-02-06 23:59:59'
   abstract_deadline: '2025-01-30 23:59:59'
@@ -173,19 +217,20 @@
   end: 2025-06-25
   sub: HCI
 
-- title: CC
+- title: "ACM Creativity & Cognition (C&C)"
   year: 2026
   id: cc26
-  full_name: Creativity & Cognition
+  full_name: "ACM Creativity & Cognition Conference"
   link: https://cc.acm.org/2026/
   deadline: '2026-02-05 23:59:59'
   abstract_deadline: '2026-01-29 23:59:59'
   timezone: UTC-12
-  place: Online
+  place: London, UK
   date: July, 13-16, 2026
   start: 2026-07-13
   end: 2026-07-16
   sub: HCI
+  note: Official 2026 site states the conference is in-person in London, UK (Central Saint Martins, University of the Arts London).
 
 - title: CHI
   year: 2023
@@ -351,10 +396,12 @@
   year: 2026
   id: cscw26
   link: https://cscw.acm.org/2026/papers.html
-  deadline: '2025-05-13 23:59:59'
+  deadline: '2025-05-14 04:00:00'
   timezone: UTC-12
-  place: TBA
-  date: TBA
+  place: Salt Lake City, Utah, USA
+  date: October, 10-14, 2026
+  start: 2026-10-10
+  end: 2026-10-14
   sub: CSCW
 
 - title: CUI
@@ -635,6 +682,21 @@
   place: Athens, Greece
   date: TBD
   sub: HCI
+
+- title: IEEE CoG
+  year: 2025
+  id: cog25
+  full_name: IEEE Conference on Games
+  link: https://cog2025.inesc-id.pt/call-for-papers/
+  deadline: '2025-03-15 23:59:59'
+  abstract_deadline: ""
+  timezone: UTC-12
+  place: Lisbon, Portugal
+  date: August, 26-29, 2025
+  start: 2025-08-26
+  end: 2025-08-29
+  sub: ['HCI', 'AI', 'DES']
+  note: User-requested IEEE GEM mapped to IEEE CoG; full paper deadline March 15, 2025.
 
 - title: Graphics Interface (December round)
   year: 2025
@@ -961,6 +1023,36 @@
   end: 2025-10-15
   sub: HCI
 
+- title: ACM IMX
+  year: 2026
+  id: imx26
+  full_name: ACM International Conference on Interactive Media Experiences
+  link: https://imx.acm.org/2026/authors/important-dates/
+  deadline: '2026-01-22 23:59:59'
+  abstract_deadline: ""
+  timezone: UTC-12
+  place: Athlone, Ireland
+  date: June, 9-11, 2026
+  start: 2026-06-09
+  end: 2026-06-11
+  sub: ['HCI', 'DES']
+  note: Paper-track submission deadline extended from Jan 15 to Jan 22, 2026; all deadlines are AoE.
+
+- title: ISEA
+  year: 2026
+  id: isea26
+  full_name: International Symposium on Electronic Art
+  link: https://isea-international.org/
+  deadline: '2025-12-20 23:59:59'
+  abstract_deadline: ""
+  timezone: UTC-12
+  place: Dubai, UAE
+  date: April, 10-19, 2026
+  start: 2026-04-10
+  end: 2026-04-19
+  sub: ['DES', 'VIS', 'HCI']
+  note: ISEA2026 announced for Dubai (Apr 10-19, 2026); current official call lists Dec 20, 2025 as key submission deadline.
+
 - title: ISMAR (Journal Papers)
   year: 2023
   id: ismar23j
@@ -1218,6 +1310,21 @@
   end: 2026-09-03
   sub: HCI
 
+- title: NIME
+  year: 2026
+  id: nime26
+  full_name: International Conference on New Interfaces for Musical Expression
+  link: https://nime2026.org/
+  deadline: '2026-02-12 23:59:59'
+  abstract_deadline: '2026-02-05 23:59:59'
+  timezone: UTC-12
+  place: London, UK
+  date: June, 24-26, 2026
+  start: 2026-06-24
+  end: 2026-06-26
+  sub: ['HCI', 'MUSIC']
+  note: NIME 2026 abstract deadline Feb 5, 2026 and full submission deadline Feb 12, 2026 (AoE).
+
 - title: IEEE PacificVis
   year: 2024
   id: pacificvis24
@@ -1262,6 +1369,66 @@
   end: 2026-04-23
   sub: VIS
   note: Conference paper track
+
+- title: ACM PDC
+  year: 2026
+  id: pdc26
+  full_name: ACM Participatory Design Conference
+  link: https://www.pdc2026.polimi.it/calls/
+  deadline: '2025-06-16 23:59:59'
+  abstract_deadline: ""
+  timezone: UTC-12
+  place: Milan, Italy
+  date: June, 15-19, 2026
+  start: 2026-06-15
+  end: 2026-06-19
+  sub: ['HCI', 'DES', 'CSCW']
+  note: Latest official PDC 2026 call information indicates full-paper deadline June 16, 2025.
+
+- title: POM
+  year: 2025
+  id: pom25
+  full_name: Politics of the Machines
+  link: https://pom-conference.org/pom-perth-2025/
+  deadline: '2025-03-29 23:59:59'
+  abstract_deadline: ""
+  timezone: UTC-12
+  place: Perth, Australia
+  date: July, 16-18, 2025
+  start: 2025-07-16
+  end: 2025-07-18
+  sub: ['DES', 'HCI']
+  note: POM Perth 2025 call for abstracts extended deadline is March 29, 2025.
+
+- title: ACM SIGGRAPH
+  year: 2026
+  id: siggraph26
+  full_name: ACM SIGGRAPH Conference and Exhibition on Computer Graphics and Interactive Techniques
+  link: https://s2026.siggraph.org/
+  deadline: '2026-01-22 10:00:00'
+  abstract_deadline: '2026-01-15 10:00:00'
+  timezone: UTC-12
+  place: Los Angeles, CA, USA
+  date: July, 19-23, 2026
+  start: 2026-07-19
+  end: 2026-07-23
+  sub: ['HCI', 'CG']
+  note: Technical Papers deadlines are announced as January 15/22, 2026 at 22:00 UTC (stored here in UTC-12 equivalent).
+
+- title: ACM SIGGRAPH Asia
+  year: 2025
+  id: siggraphasia25
+  full_name: ACM SIGGRAPH Asia Conference and Exhibition on Computer Graphics and Interactive Techniques in Asia
+  link: https://asia.siggraph.org/2025/submissions/technical-papers/
+  deadline: '2025-05-23 23:59:59'
+  abstract_deadline: '2025-05-16 23:59:59'
+  timezone: UTC-12
+  place: Hong Kong
+  date: December, 15-18, 2025
+  start: 2025-12-15
+  end: 2025-12-18
+  sub: ['HCI', 'CG']
+  note: Technical Papers form deadline May 16, 2025; full PDF/assets deadline May 23, 2025.
 
 - title: SUI
   year: 2023
@@ -1454,6 +1621,21 @@
   end: 2025-11-07
   sub: VIS
 
+- title: VISAP
+  year: 2025
+  id: visap25
+  full_name: IEEE VIS Arts Program
+  link: https://visap.net/2025/submission.html
+  deadline: '2025-06-20 23:59:59'
+  abstract_deadline: ""
+  timezone: UTC-12
+  place: Vienna, Austria
+  date: November, 6-15, 2025
+  start: 2025-11-06
+  end: 2025-11-15
+  sub: ['VIS', 'DES', 'HCI']
+  note: Submission deadline extended to June 20, 2025 (AoE); VISAP exhibition Nov 6-15, 2025.
+
 - title: VL/HCC
   year: 2023
   id: vlhcc23
@@ -1612,3 +1794,19 @@
   start: 2025-07-08
   end: 2025-07-11
   sub: HAP
+
+- title: xCoAx
+  year: 2026
+  id: xcoax26
+  full_name: Conference on Computation, Communication, Aesthetics and X
+  link: https://xcoax.org/
+  deadline: '2026-02-15 23:59:59'
+  abstract_deadline: ""
+  timezone: UTC-12
+  place: Torino, Italy
+  date: July, 8-10, 2026
+  start: 2026-07-08
+  end: 2026-07-10
+  sub: ['DES', 'VIS', 'HCI']
+  note: xCoAx 2026 submissions deadline was extended from Feb 1 to Feb 15, 2026 (AoE).
+

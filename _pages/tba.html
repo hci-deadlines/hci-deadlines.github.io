@@ -1,0 +1,120 @@
+---
+permalink: /tba/
+---
+
+<html>
+  <head>
+    {% include head.html %}
+  </head>
+
+  <body>
+    {% include header.html %}
+    <div class="container">
+      <div class="page-header">
+        <div class="row">
+          <div class="col-12 col-sm-12">
+            <h1>TBA Conferences</h1>
+          </div>
+          <div class="meta col-12">
+            Conferences with incomplete metadata (TBA/TBD/empty fields). These are hidden from the main countdown page until details are complete.
+          </div>
+        </div>
+      </div>
+
+      <div id="tba_confs">
+        {% assign tba_count = 0 %}
+        {% assign sorted_confs = site.data.conferences | sort: "year" | reverse %}
+        {% for conf in sorted_confs %}
+        {% assign deadline_value = conf.deadline | append: "" | upcase %}
+        {% assign date_value = conf.date | append: "" | upcase %}
+        {% assign place_value = conf.place | append: "" | upcase %}
+        {% assign start_value = conf.start | append: "" %}
+        {% assign end_value = conf.end | append: "" %}
+        {% assign has_tba = false %}
+        {% if deadline_value contains "TBA" or deadline_value contains "TBD" or date_value contains "TBA" or date_value contains "TBD" or place_value contains "TBA" or place_value contains "TBD" or start_value == "" or end_value == "" %}
+        {% assign has_tba = true %}
+        {% endif %}
+
+        {% if has_tba %}
+        {% assign tba_count = tba_count | plus: 1 %}
+        <div id="{{conf.id}}" class="ConfItem {% for sub in conf.sub %} {{sub}}-conf {% endfor %}">
+          <div class="row conf-row">
+            <div class="col-12 col-sm-7">
+              <span class="conf-title">
+                <a
+                  title="{% if conf.full_name %}{{conf.full_name}}{% else %}Deadline{% endif %} Details"
+                  href="{{site.baseurl}}/conference?id={{ conf.id }}"
+                  >{{conf.title}} {{conf.year}}</a
+                >
+              </span>
+              <span class="conf-title-icon">
+                <a
+                  title="Conference Website"
+                  href="{{conf.link}}"
+                  target="_blank"
+                  ><img
+                    src="{{site.baseurl}}/static/img/203-earth.svg"
+                    class="badge-link"
+                    alt="Link to Conference Website"
+                /></a>
+              </span>
+            </div>
+            <div class="col-12 col-sm-5 deadline">
+              <b>Deadline:</b>
+              {% if conf.deadline %}{{conf.deadline}}{% else %}TBA{% endif %}
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-12 col-sm-6">
+              <div class="meta">
+                <span class="conf-date">{% if conf.date and conf.date != "" %}{{conf.date}}{% else %}TBA{% endif %}.</span>
+                <span class="conf-place">
+                  {% if conf.place and conf.place != "" and conf.place != "Online" %}
+                  <a href="http://maps.google.com/?q={{conf.place}}">{{conf.place}}</a>.
+                  {% elsif conf.place == "Online" %}
+                  <a href="#">{{conf.place}}</a>.
+                  {% else %}
+                  <a href="#">TBA</a>.
+                  {% endif %}
+                </span>
+              </div>
+              {% if conf.note %}
+              <div class="note"><b>Note: </b>{{conf.note}}</div>
+              {% endif %}
+            </div>
+            <div class="col-12 col-sm-6">
+              {% if conf.abstract_deadline %}
+              <div class="deadline"><b>Abstract deadline:</b> {{conf.abstract_deadline}}</div>
+              {% endif %}
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-12">
+              {% for sub in conf.sub %}
+              {% assign sub_name = sub %}
+              {% for type in site.data.types %}
+              {% if type.sub == sub %}
+              {% assign sub_name = type.name %}
+              {% endif %}
+              {% endfor %}
+              <span class="conf-sub">{{ sub_name | downcase }}</span>
+              {% endfor %}
+            </div>
+          </div>
+          <hr />
+        </div>
+        {% endif %}
+        {% endfor %}
+
+        {% if tba_count == 0 %}
+        <div class="meta">No TBA conferences right now.</div>
+        {% endif %}
+      </div>
+
+      <footer>{% include footer.html %}</footer>
+      <br /><br />
+    </div>
+  </body>
+</html>
