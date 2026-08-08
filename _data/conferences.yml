@@ -507,6 +507,20 @@
   end: 2026-06-17
   sub: DES
 
+- title: DIS
+  year: 2027
+  id: dis27
+  link: https://dis.acm.org/2027/
+  deadline: '2027-01-18 23:59:59'
+  abstract_deadline: '2027-01-11 23:59:59'
+  timezone: UTC-12
+  place: Stockholm, Sweden
+  date: June, 28 - July, 2, 2027
+  start: 2027-06-28
+  end: 2027-07-02
+  sub: DES
+  note: Provisional submission dates
+
 - title: EICS PACM (Round 2)
   year: 2024
   id: eics24_2
@@ -804,6 +818,19 @@
   date: March, 16-19, 2026
   start: 2026-03-16
   end: 2026-03-19
+  sub: HRI
+
+- title: HRI
+  year: 2027
+  id: hri27
+  link: https://humanrobotinteraction.org/2027/
+  deadline: '2026-09-18 23:59:59'
+  abstract_deadline: '2026-09-11 23:59:59'
+  timezone: UTC-12
+  place: Santa Clara, California, USA
+  date: March, 8-12, 2027
+  start: 2027-03-08
+  end: 2027-03-12
   sub: HRI
 
 - title: ICMI
@@ -1669,6 +1696,19 @@
   date: November, 2-7, 2025
   start: 2025-11-02
   end: 2025-11-07
+  sub: VIS
+
+- title: VIS
+  year: 2026
+  id: vis26
+  link: https://ieeevis.org/year/2026/welcome/
+  deadline: '2026-03-31 23:59:59'
+  abstract_deadline: '2026-03-21 23:59:59'
+  timezone: UTC-12
+  place: Boston, Massachusetts, USA
+  date: November, 9-13, 2026
+  start: 2026-11-09
+  end: 2026-11-13
   sub: VIS
 
 - title: VL/HCC
