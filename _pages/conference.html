@@ -193,7 +193,7 @@ permalink: /conference/
       }
 
       // abstract deadline
-      {% if conf.abstract_deadline %}
+      {% if conf.abstract_deadline and conf.abstract_deadline != "" %}
       console.log("Abstract deadline: {{conf.abstract_deadline}}");
       try {
         var abstractDeadline = moment.tz("{{conf.abstract_deadline}}", timezone);

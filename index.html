@@ -167,7 +167,7 @@
                 {% endif %}
               </div>
               <div class="col-12 col-sm-6">
-                {% if conf.abstract_deadline %}
+                {% if conf.abstract_deadline and conf.abstract_deadline != "" %}
                 <div class="deadline">
                   <div>
                     <b>Abstract deadline:</b>
@@ -237,7 +237,7 @@
         var timezone = {% if conf.timezone %}"{{conf.timezone}}" {% else %} "America/New_York" {% endif %};
       var confDate = moment.tz("{{conf.deadline}}", timezone);
       var abstractDeadline = null;
-      {% if conf.abstract_deadline %}
+      {% if conf.abstract_deadline and conf.abstract_deadline != "" %}
       abstractDeadline = moment.tz("{{conf.abstract_deadline}}", timezone);
       {% endif %}
 
