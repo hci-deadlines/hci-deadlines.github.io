@@ -1,3 +1,17 @@
+- title: SaTML
+  year: 2027
+  id: satml27
+  full_name: IEEE Conference on Secure and Trustworthy Machine Learning
+  link: https://satml.org/
+  deadline: '2026-09-29 23:59:59'
+  timezone: UTC-12
+  place: Reykjavik, Iceland
+  date: Early May, 2027
+  start: ''
+  end: ''
+  sub: ML
+  note: Exact conference dates are TBA. More info <a href='https://satml.org/call-for-papers/'>here</a>.
+
 - title: AISTATS
   year: 2025
   id: aistats25
