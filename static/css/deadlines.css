@@ -1,3 +1,76 @@
+/* ─────────────────────────────────────────────────────────────────────────
+   Theme tokens.
+
+   Every colour below is defined once here and referenced through the rest of
+   the file, so dark mode is a matter of swapping this block rather than
+   hunting hard-coded hex values.
+
+   Resolution order:
+     1. :root                              -> light, the default
+     2. prefers-color-scheme: dark         -> follow the OS on a first visit
+     3. [data-theme="dark"|"light"]        -> an explicit choice always wins
+   ───────────────────────────────────────────────────────────────────────── */
+:root {
+  --bg: #ffffff;
+  --fg: #212529;
+  --muted: #808080;
+  --border: #cccccc;
+  --border-soft: #dedede;
+  --surface: rgba(236, 240, 241, 0.7);
+  --surface-solid: #f6f7f8;
+  --accent: rgb(36, 101, 191);
+  --accent-strong: #0097e6;
+  --timer: #444444;
+  --pre: #333333;
+  --strip: #333333;
+  --danger: #bb2d3b;
+  --pwc: #1198b2;
+  --selection: #e74c3c;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #14171c;
+    --fg: #e6e8eb;
+    --muted: #9aa2ad;
+    --border: #3a4048;
+    --border-soft: #2c313a;
+    --surface: rgba(255, 255, 255, 0.06);
+    --surface-solid: #1c2028;
+    --accent: #7fb0ff;
+    --accent-strong: #35b3ff;
+    --timer: #e6e8eb;
+    --pre: #c8cdd4;
+    --strip: #0d1015;
+    --danger: #e0596a;
+    --pwc: #3fc9e0;
+    --selection: #e74c3c;
+  }
+}
+
+[data-theme="dark"] {
+  --bg: #14171c;
+  --fg: #e6e8eb;
+  --muted: #9aa2ad;
+  --border: #3a4048;
+  --border-soft: #2c313a;
+  --surface: rgba(255, 255, 255, 0.06);
+  --surface-solid: #1c2028;
+  --accent: #7fb0ff;
+  --accent-strong: #35b3ff;
+  --timer: #e6e8eb;
+  --pre: #c8cdd4;
+  --strip: #0d1015;
+  --danger: #e0596a;
+  --pwc: #3fc9e0;
+  --selection: #e74c3c;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--fg);
+}
+
 body {
   font-size: 16px;
   line-height: 23px;
@@ -6,7 +79,7 @@ body {
 }
 
 body *::selection {
-  background: #e74c3c;
+  background: var(--selection);
   color: #fff;
 }
 
@@ -15,7 +88,7 @@ body *::selection {
 }
 
 .top-strip {
-  background-color: #333;
+  background-color: var(--strip);
   height: 0.25em;
   width: 100%;
 }
@@ -59,12 +132,12 @@ h3 {
 
 p.authors {
   margin-bottom: 5px;
-  color: #808080;
+  color: var(--muted);
   font-size: 20px;
 }
 
 p.authors a {
-  border-color: #dedede;
+  border-color: var(--border-soft);
 }
 
 img {
@@ -77,7 +150,7 @@ p {
 
 a {
   text-decoration: none;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid var(--border);
   color: inherit;
 }
 
@@ -93,11 +166,11 @@ a:focus {
 
 .thumb {
   margin: 20px 0;
-  border: 1px solid #808080;
+  border: 1px solid var(--muted);
 }
 
 pre {
-  color: #333;
+  color: var(--pre);
   font-size: 12px;
   line-height: 17px;
 }
@@ -153,7 +226,7 @@ footer {
 
 #conf-timer {
   font-size: 72px;
-  color: #444;
+  color: var(--timer);
   margin-top: 40px;
   margin-bottom: 0.5em;
 }
@@ -163,8 +236,8 @@ footer {
 }
 
 .conf-sub {
-  color: rgb(36, 101, 191);
-  background: rgba(236, 240, 241, 0.7);
+  color: var(--accent);
+  background: var(--surface);
   font-size: 13px;
   padding: 3px 5px;
   margin-right: 8px;
@@ -173,17 +246,17 @@ footer {
 }
 
 .conf-sub::selection {
-  background: #0097e6;
+  background: var(--accent-strong);
 }
 
 .checkbox input[type="checkbox"]:checked:after {
-  background-color: #0097e6;
-  border-color: #0097e6;
+  background-color: var(--accent-strong);
+  border-color: var(--accent-strong);
 }
 
 .checkbox input[type="checkbox"]:after,
 .checkbox input[type="checkbox"]:focus:after {
-  border-color: #0097e6;
+  border-color: var(--accent-strong);
 }
 
 #sort-order-checkbox {
@@ -193,13 +266,13 @@ footer {
 }
 
 #sort-order-checkbox input[type="checkbox"]:checked:after {
-    background-color: #0097e6;
-    border-color: #0097e6;
+    background-color: var(--accent-strong);
+    border-color: var(--accent-strong);
   }
   
 #sort-order-checkbox input[type="checkbox"]:after,
 #sort-order-checkbox input[type="checkbox"]:focus:after {
-    border-color: #0097e6;
+    border-color: var(--accent-strong);
 }
 
 .filter-label {
@@ -214,7 +287,7 @@ footer {
 }
 
 .pwc-link:hover {
-  border-bottom: 1px solid #1198b2;
+  border-bottom: 1px solid var(--pwc);
 }
 
 .icon-inner {
@@ -227,7 +300,7 @@ footer {
 }
 
 .pwc-icon {
-  color: #1198b2;
+  color: var(--pwc);
 }
 
 .twitter-github-icons {
@@ -236,7 +309,7 @@ footer {
 
 #past-events-title {
   padding-bottom: 15px;
-  border-bottom: 2px solid #bb2d3b;
+  border-bottom: 2px solid var(--danger);
 }
 
 #past_confs .past{
@@ -252,7 +325,7 @@ footer {
 
 
 .badge-danger {
-  background-color: #bb2d3b;
+  background-color: var(--danger);
 }
 
 @media only screen and (max-width: 768px) {
@@ -325,3 +398,111 @@ footer {
 .calendar img {
   height: 20px;
 }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Dark mode: third-party components.
+
+   Bootstrap, bootstrap-multiselect and js-year-calendar ship light-only
+   stylesheets and are loaded before this file, so their surfaces are pinned
+   here rather than in the token block above.
+   ───────────────────────────────────────────────────────────────────────── */
+[data-theme="dark"] .modal-content,
+[data-theme="dark"] .dropdown-menu,
+[data-theme="dark"] .form-control,
+[data-theme="dark"] .multiselect-container,
+[data-theme="dark"] .multiselect-container li a {
+  background-color: var(--surface-solid);
+  color: var(--fg);
+  border-color: var(--border);
+}
+
+[data-theme="dark"] .modal-header,
+[data-theme="dark"] .modal-footer {
+  border-color: var(--border);
+}
+
+[data-theme="dark"] .form-control::placeholder { color: var(--muted); }
+[data-theme="dark"] .form-control:focus {
+  background-color: var(--surface-solid);
+  color: var(--fg);
+  border-color: var(--accent-strong);
+  box-shadow: 0 0 0 0.2rem rgba(53, 179, 255, 0.25);
+}
+
+[data-theme="dark"] .dropdown-item { color: var(--fg); }
+[data-theme="dark"] .dropdown-item:hover,
+[data-theme="dark"] .dropdown-item:focus,
+[data-theme="dark"] .multiselect-container > li > a:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: var(--fg);
+}
+
+[data-theme="dark"] .btn-default {
+  background-color: var(--surface-solid);
+  color: var(--fg);
+  border-color: var(--border);
+}
+
+/* Bootstrap 4 draws the modal close as a text glyph: color #000 with a white
+   text-shadow. Recolour it and drop the shadow — inverting it would only turn
+   a light glyph dark again and leave it invisible on a dark modal. */
+[data-theme="dark"] .close {
+  color: var(--fg);
+  text-shadow: none;
+  opacity: 0.75;
+}
+[data-theme="dark"] .close:hover,
+[data-theme="dark"] .close:focus {
+  color: var(--fg);
+  opacity: 1;
+}
+
+/* js-year-calendar chrome. Its own class names are used here; the .calendar
+   class on the countdown page belongs to the per-conference export links and
+   is a different element entirely. */
+[data-theme="dark"] .calendar-header,
+[data-theme="dark"] .month-container,
+[data-theme="dark"] .month-title,
+[data-theme="dark"] .day-header,
+[data-theme="dark"] .calendar-context-menu,
+[data-theme="dark"] .submenu {
+  background-color: var(--surface-solid);
+  color: var(--fg);
+  border-color: var(--border);
+}
+
+[data-theme="dark"] .day { color: var(--fg); }
+[data-theme="dark"] .day.disabled { opacity: 0.35; }
+/* .day-content carries the per-event colour inline, so only unpainted days
+   are tinted here. */
+[data-theme="dark"] .day:not([style*="background"]) .day-content {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   The theme toggle, sitting in the navbar
+   ───────────────────────────────────────────────────────────────────────── */
+#theme-toggle {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 999px;
+  color: rgba(255, 255, 255, 0.85);
+  cursor: pointer;
+  font-size: 15px;
+  line-height: 1;
+  padding: 5px 10px;
+  margin-left: 12px;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+#theme-toggle:hover { border-color: #fff; color: #fff; }
+#theme-toggle:focus-visible { outline: 2px solid var(--accent-strong); outline-offset: 2px; }
+
+@media (prefers-reduced-motion: reduce) {
+  #theme-toggle { transition: none; }
+}
+
+
+/* The glyph is derived from the theme rather than set by script, so it is
+   already correct on the first paint and stays correct with JS disabled. */
+#theme-toggle::before { content: "\1F319"; }              /* crescent: offer dark */
+[data-theme="dark"] #theme-toggle::before { content: "\2600"; }  /* sun: offer light */

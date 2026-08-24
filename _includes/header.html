@@ -25,6 +25,8 @@
           <a href="{{site.baseurl}}/past" class="nav-link" style="border-bottom: none;">Past Deadlines</a>
         </li>
       </ul>
+      <button id="theme-toggle" type="button" title="Switch theme" aria-label="Switch theme"></button>
+
       <div class="twitter-github-icons">
         <a href="https://twitter.com/share" class="twitter-share-button"
           data-text="{{ site.description }}{% if site.twitter.hashtag %} #{{ site.twitter.hashtag }}{% endif %}"
@@ -38,3 +40,40 @@
     </div>
   </div>
 </nav>
+
+<script>
+  /* Theme toggle. The glyph itself is drawn by CSS from the data-theme
+     attribute, so it is already correct on first paint and this script only
+     has to flip the attribute, keep the label truthful, and remember the
+     choice. The label states the action, which is what a screen reader needs. */
+  (function () {
+    var btn = document.getElementById('theme-toggle');
+    if (!btn) return;
+
+    function label() {
+      var dark = document.documentElement.getAttribute('data-theme') === 'dark';
+      var text = dark ? 'Switch to light mode' : 'Switch to dark mode';
+      btn.setAttribute('title', text);
+      btn.setAttribute('aria-label', text);
+    }
+
+    label();
+
+    btn.addEventListener('click', function () {
+      var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      label();
+      try { localStorage.setItem('hci-deadlines-theme', next); } catch (e) {}
+    });
+
+    /* Keep following the OS until the visitor expresses a preference. */
+    var mq = window.matchMedia('(prefers-color-scheme: dark)');
+    var onChange = function (e) {
+      try { if (localStorage.getItem('hci-deadlines-theme')) return; } catch (err) {}
+      document.documentElement.setAttribute('data-theme', e.matches ? 'dark' : 'light');
+      label();
+    };
+    if (mq.addEventListener) mq.addEventListener('change', onChange);
+    else if (mq.addListener) mq.addListener(onChange);
+  })();
+</script>
