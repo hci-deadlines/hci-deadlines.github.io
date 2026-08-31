@@ -1085,6 +1085,54 @@
   end: 2026-10-15
   sub: HCI
 
+- title: IMWUT (Ubicomp/ISWC)
+  year: 2027
+  id: imwut27_1
+  link: https://dl.acm.org/journal/imwut/how-to-submit
+  deadline: '2026-11-01 23:59:59'
+  timezone: UTC-12
+  place: Seoul Dragon City, Seoul, Republic of Korea
+  date: October, 03-07, 2027
+  start: 2027-10-03
+  end: 2027-10-07
+  sub: HCI
+
+- title: IMWUT (Ubicomp/ISWC)
+  year: 2027
+  id: imwut27_2
+  link: https://dl.acm.org/journal/imwut/how-to-submit
+  deadline: '2027-02-01 23:59:59'
+  timezone: UTC-12
+  place: Seoul Dragon City, Seoul, Republic of Korea
+  date: October, 03-07, 2027
+  start: 2027-10-03
+  end: 2027-10-07
+  sub: HCI
+
+- title: IMWUT (Ubicomp/ISWC)
+  year: 2027
+  id: imwut27_3
+  link: https://dl.acm.org/journal/imwut/how-to-submit
+  deadline: '2027-05-01 23:59:59'
+  timezone: UTC-12
+  place: Seoul Dragon City, Seoul, Republic of Korea
+  date: October, 03-07, 2027
+  start: 2027-10-03
+  end: 2027-10-07
+  sub: HCI
+
+- title: IMWUT - resubmission only (Ubicomp/ISWC)
+  year: 2027
+  id: imwut27_4
+  link: https://dl.acm.org/journal/imwut/how-to-submit
+  deadline: '2027-08-01 23:59:59'
+  timezone: UTC-12
+  place: Seoul Dragon City, Seoul, Republic of Korea
+  date: October, 03-07, 2027
+  start: 2027-10-03
+  end: 2027-10-07
+  sub: HCI
+
 - title: ACM IMX
   year: 2026
   id: imx26
