@@ -2,6 +2,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
+<script>
+  /* Applied before the first paint so a dark-mode visitor never sees a white
+     flash. Reads the saved choice, otherwise defers to the OS setting. */
+  (function () {
+    try {
+      var saved = localStorage.getItem('hci-deadlines-theme');
+      var theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    } catch (e) {
+      /* private mode or storage disabled: fall through to the light default */
+    }
+  })();
+</script>
+
+
 <title>{{ site.title }}</title>
 <meta name="description" content="{{ site.description }}">
 <meta name="author" content="{{ site.author }}">
