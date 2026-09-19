@@ -900,6 +900,19 @@
   end: 2026-10-09
   sub: HCI
 
+- title: ICRA
+  year: 2027
+  id: icra27
+  full_name: IEEE International Conference on Robotics and Automation
+  link: https://2027.ieee-icra.org/
+  deadline: '2026-09-16 23:59:59'
+  timezone: UTC-12
+  place: Seoul, South Korea
+  date: May, 24-28, 2027
+  start: 2027-05-24
+  end: 2027-05-28
+  sub: HRI
+
 - title: ICSR
   year: 2026
   id: icsr26
