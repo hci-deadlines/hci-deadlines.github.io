@@ -99,7 +99,7 @@ function load_conference_list() {
       endDate: Date.parse("{{conf.deadline}}"),
     });
 
-    {% if conf.abstract_deadline != "" %}
+    {% if conf.abstract_deadline and conf.abstract_deadline != "" %}
     conf_list_all.push({
       id: "{{conf.id}}-abstract-deadline",
       abbreviation: "{{conf.id}}",
