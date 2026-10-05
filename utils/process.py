@@ -123,6 +123,7 @@ with open("../_data/conferences.yml", 'r') as stream:
                     conf + tba,
                     Dumper=yaml.SafeDumper,
                     default_flow_style=False,
+                    width=float("inf"),
                     explicit_start=True).splitlines():
                 outfile.write(line.replace('- title:', '\n- title:'))
                 outfile.write('\n')
