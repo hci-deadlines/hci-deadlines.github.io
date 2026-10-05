@@ -773,20 +773,6 @@
   end: 2025-01-15
   sub: HCI
 
-- title: HAIC
-  year: 2027
-  id: haic27
-  full_name: Human-AI Interaction Conference
-  link: https://haic.cc/
-  deadline: '2027-01-31 23:59:59'
-  timezone: UTC-12
-  place: Washington, DC, USA
-  date: June, 27-30, 2027
-  start: 2027-06-27
-  end: 2027-06-30
-  sub: AI+HCI
-  note: Provisional deadline (site says late January 2027)
-
 - title: HAIPS
   year: 2025
   id: haips25
