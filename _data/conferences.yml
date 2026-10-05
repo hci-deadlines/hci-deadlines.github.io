@@ -784,7 +784,7 @@
   date: June, 27-30, 2027
   start: 2027-06-27
   end: 2027-06-30
-  sub: AI+HCI
+  sub: ['AI', 'HCI']
   note: Provisional deadline (site says late January 2027)
 
 - title: HAIPS
