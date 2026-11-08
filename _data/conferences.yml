@@ -1737,6 +1737,20 @@
   sub: HCI
   note: Deadlines are all tentative as of November 2025.
 
+- title: UIST
+  year: 2027
+  id: uist27
+  link: https://uist.acm.org/2027
+  deadline: '2027-04-07 23:59:59'
+  abstract_deadline: '2027-03-31 23:59:59'
+  timezone: UTC-12
+  place: Vienna, Austria
+  date: October 26-29, 2027
+  start: 2027-10-26
+  end: 2027-10-29
+  sub: HCI
+  note: Supplementary materials due on April 9.
+
 - title: VIS
   year: 2023
   id: vis23
